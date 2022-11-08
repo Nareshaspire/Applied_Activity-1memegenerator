@@ -1,4 +1,6 @@
-﻿namespace memegenerator;
+﻿using CommunityToolkit.Maui;
+
+namespace memegenerator;
 
 public static class MauiProgram
 {
@@ -7,6 +9,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -16,4 +19,3 @@ public static class MauiProgram
 		return builder.Build();
 	}
 }
-
